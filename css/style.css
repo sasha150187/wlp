@@ -27,24 +27,10 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-weight: 800;
-  font-family: "Gilroy";
-  font-style: normal;
-  src: url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
-}
-
-@font-face {
-  font-weight: 300;
-  font-family: "Gilroy";
-  font-style: normal;
-  src: url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
-}
-
 .p {
-  font-family: "Gilroy";
+  font-family: "Bokor";
   font-style: normal;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 36px;
   line-height: 70px;
   text-align: center;
