@@ -78,22 +78,49 @@ a {
   height: 20px;
   background-color: transparent;
   border: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  outline: none;
+  position: relative;
+  top: 36px;
+  left: 80px;
 }
 
-.navigation-toggle::after {
+.toggle-active .button::after {
+  transform: rotate(45deg);
+}
+
+.toggle-active .button::before {
+  transform: rotate(-45deg);
+}
+
+.toggle-active .button {
+  height: 0;
+}
+
+.button::after {
   content: "";
   position: absolute;
-  background-image: url(../svg/burger.svg);
-  background-repeat: no-repeat;
+  background-color: #ffffff;
   width: 30px;
-  height: 30px;
-  top: 42px;
-  right: 53px;
-  cursor: pointer;
+  height: 2px;
+  transform: translateY(7px);
+  transition: 0.2s;
+}
+
+.button {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  top: 50%;
+  background-color: #ffffff;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 30px;
+  height: 2px;
+  transform: translateY(-7px);
+  transition: 0.2s;
 }
 
 .container {
@@ -116,7 +143,7 @@ a {
   text-transform: uppercase;
   border-right: 1px solid rgba(255, 255, 255, 0.22);
   position: relative;
-  padding-top: 36px;
+  padding-top: 26px;
   padding-bottom: 36px;
   padding-right: 25px;
 }
@@ -154,7 +181,7 @@ a {
 .contacts {
   display: flex;
   list-style: none;
-  padding-top: 36px;
+  padding-top: 32px;
   padding-left: 0;
   margin: 0;
 }
@@ -212,13 +239,20 @@ a {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.22);
   width: 1px;
-  height: 107px;
+  height: 96px;
   top: 0;
   left: 212px;
 }
 
 .presentation {
   list-style: none;
+  margin-bottom: 100px;
+}
+
+.presentation li:first-child {
+  margin-bottom: 54px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22)
 }
 
 .list-1 h2,
@@ -242,6 +276,10 @@ a {
   margin: 0;
 }
 
+.list-1 p {
+  margin-bottom: 54px;
+}
+
 .column-top h1 {
   font-family: "Century Expanded", serif;
   font-size: 60px;
@@ -255,6 +293,7 @@ a {
   line-height: 34px;
   font-weight: 400;
   margin: 0;
+  width: 660px;
 }
 
 .column-bottom a {
@@ -269,7 +308,6 @@ a {
   list-style: none;
   display: flex;
   position: relative;
-  outline: 1px solid red;
 }
 
 .social {
@@ -409,13 +447,16 @@ a {
 }
 
 .column-top {
-  width: 350px;
+  width: 488px;
 }
 
 .column-bottom {
   display: flex;
-  flex-direction: row;
-  width: 350px;
+}
+
+.column-bottom h1 {
+  margin: 0;
+  width: 397px;
 }
 
 .content .container {
