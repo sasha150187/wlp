@@ -210,6 +210,14 @@ a {
   position: relative;
 }
 
+.menu-list a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.menu-list a:active {
+  color: rgba(255, 255, 255, 0.2);
+}
+
 .menu-list .current-menu::after {
   content: "";
   position: absolute;
@@ -221,11 +229,27 @@ a {
   left: 14px;
 }
 
+.menu-list .current-menu:hover::after {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.menu-list .current-menu:active::after {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .contacts a {
   font-family: "Proxima Nova", "Arial", sans-serif;
   font-size: 18px;
   line-height: 34px;
   color: #ffffff;
+}
+
+.contacts a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contacts a:active {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .contacts {
@@ -247,12 +271,21 @@ a {
 .presentation {
   list-style: none;
   margin-bottom: 200px;
+  padding: 0;
 }
 
 .presentation li:first-child {
   margin-bottom: 54px;
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.22)
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  padding-left: 40px;
+}
+
+.presentation li:nth-child(2) {
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  padding-right: 15px;
+  padding-left: 40px;
 }
 
 .list-1 h2,
@@ -274,6 +307,10 @@ a {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.61);
   margin: 0;
+}
+
+.list-2 p {
+  margin-bottom: 54px;
 }
 
 .list-1 p {
@@ -464,7 +501,28 @@ a {
 }
 
 .column-top {
-  width: 488px;
+  position: relative;
+  width: 515px;
+}
+
+.column-top::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 443px;
+  top: -54px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.column-top::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 443px;
+  top: -54px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .column-bottom {
